@@ -1,0 +1,3 @@
+Note :
+By default, maximum size of the array is set to MAXSIZE which is 100.
+If the maximum size of the array is to be changed, then kindly update the value of MAXSIZE to the necessary value.
