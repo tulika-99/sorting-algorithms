@@ -9,6 +9,9 @@ All you need to do is just add any sorting algorithm of your choice in any langu
 
 - Create a  folder with the algorithm name and language used to implement it. ( Eg: Insertion Sort-C++ )
 - Add a .txt file with the Algorithm and a solution file which contains the solution of the given problem.
+- Add this file inside the folder with the name of the algorithm you have implemented. If not present then create a new folder with the name of the algorithm and add your own folder to it.
+- You can also help maintain a single text file containing the detailed explanation of all the algorithms.
+Since we restructured it,it does not contain a single file for the algorithm.
 
 ## Steps
 
