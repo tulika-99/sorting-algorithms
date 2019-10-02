@@ -41,3 +41,11 @@ Links to help out-
 https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line
 https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
 
+
+
+Idea for some other algorithms are :
+
+- Radix Sort
+- Heap Sort
+- Shell Sort
+- 3-way Merge Sort
