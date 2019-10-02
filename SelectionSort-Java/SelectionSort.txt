@@ -1,0 +1,17 @@
+This sorting algorithm basically works by finding the smallest element in a list and moving it to the beginning.
+For example, if you had an array {5, 2, 0, 9, 8} it would start by selecting 0 and moving it to the beginning by
+swapping with the element at that position:
+
+{5, 2, 0, 9, 8} -> {0, 2, 5, 9, 8}
+
+And then continues to do so with smaller sections until the array is fully sorted:
+
+{0, 2, 5, 9, 8} -> {0, 2, 5, 9, 8} (2 already in right position but is still checked)
+
+{0, 2, 5, 9, 8} -> {0, 2, 5, 9, 8} (same with 5)
+
+{0, 2, 5, 9, 8} -> {0, 2, 5, 8, 9}
+
+{0, 2, 5, 9, 8} -> {0, 2, 5, 8, 9}
+
+And thus, the list is sorted! While this method is simple, it is highly inefficient due having nested for loops.
