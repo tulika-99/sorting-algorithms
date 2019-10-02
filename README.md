@@ -1,6 +1,6 @@
-# sorting-algorithms
-A collection of different types of sorting algorithms in diff languages.
 # Sorting Algorithms
+
+A collection of different types of sorting algorithms in diff languages.
 This repository is open to all. 
 To help you out with you Hacktoberfest goals!!.
 All you need to do is just add any sorting algorithm of your choice in any language you like with only the condition that it hasn't already been added.
