@@ -1,0 +1,6 @@
+Insertion sort maintains two sides of the input array: sorted and unsorted.
+For each element in the array, insert the element at the current index i in the correct position on the sorted side of the array (left side).
+    Save value of element at current index in key.
+    To find place to insert key, start at index j = i-1 and check if element at index is > key. If so, move right.
+    Continue to move elements to the right and decrement j until element at j is not > key, or j passes 0.
+    Insert key at index j + 1.
