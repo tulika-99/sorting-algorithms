@@ -33,5 +33,7 @@ git push origin master
 - Create a new pull request from your forked repository
 - And you are one step closer! 
 
-Link to help out- https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line
+Links to help out- 
+https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line
+https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
 
