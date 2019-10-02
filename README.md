@@ -7,7 +7,7 @@ All you need to do is just add any sorting algorithm of your choice in any langu
 
 ## Guidelines
 
-- Create a  folder with the question name.
+- Create a  folder with the algorithm name and language used to implement it. ( Eg: Insertion Sort-C++ )
 - Add a .txt file with the problem statement and a solution file which contains the solution of the given problem.
 
 ## Steps
@@ -20,13 +20,13 @@ All you need to do is just add any sorting algorithm of your choice in any langu
 git clone https://github.com/your-username/Competitive-Programming-questions.git
 ```
 
-- Create a new folder with the question name.
+- Create a new folder with the algorithm name and language.
 - Add your question and solution file in that folder. 
 - Commit and push
 
 ```markdown
 git add .
-git commit -m 'Added question-name'
+git commit -m 'Added algorithm-name'
 git push origin master
 ```
 
