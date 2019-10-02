@@ -1,0 +1,7 @@
+Algorithm:
+
+1. Assume first element to be the least element.
+2. Compare the next element to find the least one.
+3. Repeat step 2 till the end of array to find least element in array.
+4. Replace the least element with the first element.
+5. Repeat step 1 for second, third ... all elements.
