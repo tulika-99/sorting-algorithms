@@ -8,7 +8,7 @@ All you need to do is just add any sorting algorithm of your choice in any langu
 ## Guidelines
 
 - Create a  folder with the algorithm name and language used to implement it. ( Eg: Insertion Sort-C++ )
-- Add a .txt file with the problem statement and a solution file which contains the solution of the given problem.
+- Add a .txt file with the Algorithm and a solution file which contains the solution of the given problem.
 
 ## Steps
 
@@ -21,7 +21,7 @@ git clone https://github.com/your-username/sorting-algorithms.git
 ```
 
 - Create a new folder with the algorithm name and language.
-- Add your question and solution file in that folder. 
+- Add your algorithm and solution file in that folder. 
 - Commit and push
 
 ```markdown
