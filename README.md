@@ -17,7 +17,7 @@ All you need to do is just add any sorting algorithm of your choice in any langu
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/your-username/Competitive-Programming-questions.git
+git clone https://github.com/your-username/sorting-algorithms.git
 ```
 
 - Create a new folder with the algorithm name and language.
