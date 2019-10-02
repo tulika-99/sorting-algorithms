@@ -1,0 +1,9 @@
+Problems:
+I have given a list of numbers but it is not sorted
+
+The numbers are
+[5, 7, 10, 4, 1, 8, 11, 14, 6, 2, 17, 14, 3, 9, 20, 13, 18]
+
+and in the solution file I'll write how to sort it with Bubble Sort
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
