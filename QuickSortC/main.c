@@ -39,7 +39,7 @@ int main(){
         scanf(" %d", &aux);
         arr[i] = aux;
     }
-    bbSort(arr, 0, N - 1);
+    quick_sort(arr, 0, N - 1);
     for(i = 0; i < N; i++){
         printf("\n%d", arr[i]);
     }
