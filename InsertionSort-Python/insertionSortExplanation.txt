@@ -1,0 +1,11 @@
+Insertion sort is based on the idea that one element from the input elements is consumed in each iteration to find its correct position i.e, the position to which it belongs in a sorted array.
+
+It iterates the input elements by growing the sorted array at each iteration. It compares the current element with the largest value in the sorted array. If the current element is greater, then it leaves the element in its place and moves on to the next element else it finds its correct position in the sorted array and moves it to that position. This is done by shifting all the elements, which are larger than the current element, in the sorted array to one position ahead
+
+Example:
+Take array A[] = [7,4,5,2]
+
+Step 1. [7,4,5,2] -> No element on left side of 7, so no change in its position.
+Step 2. [7,4,5,2] -> [4,7,5,2] --> As 7>4, therefore 7 will be moved forward and 4 will be moved to 7's position 
+Step 3. [4,7,5,2] -> [4,5,7,2] --> As 7>5, 7 will be move forward, but 4<5, so no change in position of 4. And 5 will be moved to position of 7.
+Step 4. [4,5,7,2] -> [2,4,5,7] --> As all the element on left side of 2 are greater than 2, so all the elements will be moved forward and 2 will be shifted to position of 4.
