@@ -1,0 +1,30 @@
+Given an unsorted array, sort the given array. You are allowed to do only following operation on array.
+
+flip(arr, i): Reverse array from 0 to i 
+Unlike a traditional sorting algorithm, which attempts to sort with the fewest comparisons possible, the goal is to sort the sequence in as few reversals as possible.
+
+The idea is to do something similar to Selection Sort. We one by one place maximum element at the end and reduce the size of current array by one.
+
+ALGORITHM-
+Begin:
+Let given array be arr[] and size of array be n.
+1) Start from current size equal to n and reduce current size by one while it’s greater than 1. Let the current size be curr_size. Do following for every curr_size
+	a) Find index of the maximum element in arr[0..curr_szie-1]. Let the index be ‘mi’
+	b) Call flip(arr, mi)
+	c) Call flip(arr, curr_size-1)
+END
+
+
+Original List: '5 7 9 4 3 2 1 6 8'
+()
+With: '5 7 9 4 3 2 1 6 8' doflip  3
+With: '9 7 5 4 3 2 1 6 8'  doflip 9
+With: '8 6 1 2 3 4 5 7 9'  doflip 8
+With: '7 5 4 3 2 1 6 8 9'  doflip 7
+With: '6 1 2 3 4 5 7 8 9'  doflip 6
+With: '5 4 3 2 1 6 7 8 9'  doflip 5
+()
+Pancake Sorted List: '1 2 3 4 5 6 7 8 9'
+
+Time Complexity:
+Total O(n) flip operations are performed in above code. The overall time complexity is O(n^2).
