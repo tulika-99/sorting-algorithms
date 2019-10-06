@@ -16,7 +16,6 @@ end
 
 arr = [5,1,102,65,12,42,103,17]
 
-puts("Desordenado")
 puts arr
-puts "Ordenado"
+puts "Sorted"
 puts bubble_sort(arr)
