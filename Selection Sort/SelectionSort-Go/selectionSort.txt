@@ -1,0 +1,36 @@
+This algorithm depends on having two within the array, sorted and unsorted. The main aim is to iterate over the array and
+add the minimum element in the unsorted part to it's corresponding, sorted index in the sorted array. Here's how the algorithm works:
+
+Let's assume that [] is the current minimum pointer and the * is the current item pointer, and the whole array is the unsorted 
+Example:
+[2]* 7 4 3 1
+
+1- The first element in the unsorted array, '2' is initially both the current miniumum and current item.
+2- Iterate through the array to find the minimum int in the arary.
+                            [2] 7* 4 3 1
+                            [2] 7 4* 3 1
+                            [2] 7 4 3* 1
+                            [2] 7 4 3 1*
+3- When you reach the minimum int in the array, swap it with the first element of the unsorted array, 
+(this creates two parts in the array, sorted and unsorted)
+and let the next item in the array to be the current and minimum item in the unsorted part.
+                            1 [7]* 4 3 2
+4- Repeat steps 1, 2 and 3 until the whole array is sorted.
+                            1 [7] 4* 3 2
+                            1 7 [4]* 3 2
+                            1 7 [4] 3* 2
+                            1 7 4 [3]* 2
+                            1 7 4 [3] 2*
+                            1 7 4 3 [2]*
+                            1 2 [7]* 4 3
+                            1 2 [7] 4* 3
+                            1 2 7 [4]* 3
+                            1 2 7 [4] 3*
+                            1 2 7 4 [3]*
+                            1 2 3 [7]* 4
+                            1 2 3 [7] 4*
+                            1 2 3 7 [4]*
+                            1 2 3 4 [7]*
+                           -------------
+                           | 1 2 3 4 7 | Final Answer
+                           -------------
