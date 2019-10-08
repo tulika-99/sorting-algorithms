@@ -1,10 +1,11 @@
 fun sort(ar: IntArray) {
-    ar.indices.forEach { i ->
-        (ar.size - 1 downTo i + 1).forEach { j ->
-            if (ar[j] < ar[j - 1]) {
-                ar[j] = ar[j - 1].also { ar[j - 1] = ar[j] }
-            }
+    (1 until ar.size).forEach { i ->
+        val el = ar[i]
+        var j = i
+        while (j > 0 && ar[j - 1] > el) {
+            ar[j] = ar[--j]
         }
+        ar[j] = el
     }
 }
 
