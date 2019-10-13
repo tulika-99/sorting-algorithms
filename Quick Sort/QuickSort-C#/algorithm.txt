@@ -1,0 +1,15 @@
+QuickSort is a Divide and Conquer algorithm. 
+It picks an element as pivot and partitions the given array around the picked pivot.
+There are many different versions of quickSort that pick pivot in different ways.
+
+Always pick first element as pivot(implemented in the program).
+Always pick last element as pivot.
+Pick a random element as pivot.
+Pick median as pivot.
+
+In the main() function, first the initial array is displayed. 
+Then, the function quickSort() is called to perform quick sort on the array.
+In the function quickSort(), a pivot element is selected by calling the Partition() function. 
+Then quickSort() is called again with arguments that depend on the value of pivot. 
+In the Partition() function, the pivot element is selected as the leftmost element of the array provided 
+and then it is set to its correct position in the array. 
