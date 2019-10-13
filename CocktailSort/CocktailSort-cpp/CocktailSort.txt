@@ -1,0 +1,32 @@
+Cocktail Sort
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order. 
+Cocktail sort is a variation of Bubble Sort where instead of doing one traversal, we do two traversals asexplained below: 
+1. Left to Right: same as bubble sort, ith iteration of this step will bring the ith largest element to it's right position in the sorted array
+2. Right to Left: this is bubble sort performed in reverse direction, ith iteration this step will bring the ith smallest element to it's right position in the sorted array
+
+Example:
+
+First Iteration:
+
+Left to Right traversal:
+( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
+( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them.
+After 1st iteration of Left to Right traversal, first largest element is at it's right position(4) in the sorted array
+
+Right to Left traversal:
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Here, algorithm compares the last two elements, and does not swap as 2 < 8.
+( 1 4 2 5 8 ) –>  ( 1 4 2 5 8 ), No Swap since 2 < 5
+( 1 4 2 5 8 ) –>  ( 1 2 4 5 8 ), Swap since 4 > 2
+( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 ), No Swap since 1 < 2
+After 1st iteration of Right to Left traversal, first smallest element is at it's right position(0) in the sorted array
+
+Second Iteration:
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 ), No Swap since 1 < 2
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 ), No Swap since 2 < 4
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 ), No Swap since 4 < 5
+( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 ), No Swap since 5 < 8
+
+Since we didn't need to perform any swap in this iteration, our array is not sorted and we return from the sorting function here.
