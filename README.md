@@ -38,6 +38,7 @@ git push origin master
 - And you are one step closer! 
 
 Links to help out- 
+
 https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line
 https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
 
