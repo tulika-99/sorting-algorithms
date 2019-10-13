@@ -1,0 +1,24 @@
+Merge k sorted arrays 
+Given k sorted arrays of size n each, merge them and print the sorted output.
+Example:
+
+Input:
+k = 3, n =  4
+arr[][] = { {1, 3, 5, 7},
+            {2, 4, 6, 8},
+            {0, 9, 10, 11}} ;
+
+Output: 0 1 2 3 4 5 6 7 8 9 10 11 
+
+A simple solution is to create an output array of size n*k and one by one copy all arrays to it. Finally, sort the output array using any O(n Log n) sorting algorithm. This approach takes O(nk Log nk) time.
+
+One efficient solution is to first merge arrays into groups of 2. After first merging, we have k/2 arrays. We again merge arrays in groups, now we have k/4 arrays. We keep doing it unit we have one array left. The time complexity of this solution would O(nk Log k). How? Every merging in first iteration would take 2n time (merging two arrays of size n). Since there are total k/2 merging, total time in first iteration would be O(nk). Next iteration would also take O(nk). There will be total O(Log k) iterations, hence time complexity is O(nk Log k) 
+
+Another efficient solution is to use Min Heap. This Min Heap based solution has same time complexity which is O(nk Log k). But for different sized arrays, this solution works much better.
+
+Following is detailed algorithm.
+1. Create an output array of size n*k.
+2. Create a min heap of size k and insert 1st element in all the arrays into the heap
+3. Repeat following steps n*k times.
+     a) Get minimum element from heap (minimum is always at root) and store it in output array.
+     b) Replace heap root with next element from the array from which the element is extracted. If the array doesn’t have any more elements, then replace root with infinite. After replacing the root, heapify the tree.
