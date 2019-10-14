@@ -4,7 +4,6 @@
 #include <stdio.h>
 
 using namespace std;
-
 void insertionsort(int [],int);
 void display(int a[], int n);
 
@@ -27,6 +26,7 @@ int main()
 	getch();
 	return 0;
 }
+/*     insertion sort function    */
 void insertionsort(int a[],int n)
 {
 	int temp,i,j;
