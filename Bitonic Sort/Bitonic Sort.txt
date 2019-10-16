@@ -1,0 +1,10 @@
+Bitonic sort is one of the fastest sorting networks. A sorting network is a special kind of sorting algorithm, 
+where the sequence of comparisons is not data-dependent. This makes sorting networks suitable for implementation 
+in hardware or in parallel processor arrays.
+
+The sorting network bitonic sort consists of Θ(n·log(n)^2) comparators. It has the same asymptotic complexity as 
+odd-even mergesort and shellsort. Although a sorting network with only O(n·log(n)) comparators is known , due to its 
+large constant it is slower than bitonic sort for all practical problem sizes.
+
+In the following, bitonic sort is developed on the basis of the 0-1-principle. The 0-1-principle states that a comparator 
+network that sorts every sequence of 0's and 1's is a sorting network, i.e. it sorts every sequence of arbitrary values.
