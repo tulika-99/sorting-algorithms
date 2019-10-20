@@ -2,7 +2,7 @@ import java.util.*;
 class bubsort
 {
     //global variables
-    int A[]=new int[10];
+    int A[]=new int[100];
     int n;
     void accept()
     {
