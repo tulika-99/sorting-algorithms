@@ -1,0 +1,57 @@
+
+
+#!/bin/bash
+
+declare -a data=()
+declare -r size=10
+declare -i steps=0
+
+for i in $(seq 0 $size); do
+    data[$i]=$(expr $RANDOM % $size)
+done
+
+function partition() {
+    pivot=${data[$1]}
+    left=$(expr $1 + 1)
+    right=$2
+
+    while true; do
+        while [[ $left -le $right && ${data[$left]} -le $pivot ]]; do
+            left=$(expr $left + 1)
+            steps=$(expr $steps + 1)
+        done
+
+        while [[ $right -ge $left && ${data[$right]} -ge $pivot ]]; do
+            right=$(expr $right - 1)
+            steps=$(expr $steps + 1)
+        done
+
+        if [[ $left -gt $right ]]; then
+            break
+        fi
+
+        temp=${data[$left]}
+        data[$left]=${data[$right]}
+        data[$right]=$temp
+    done
+
+    temp=${data[$1]}
+    data[$1]=${data[$right]}
+    data[$right]=$temp
+
+    echo $right
+}
+
+function quickSort() {
+    if [[ $1 -lt $2 ]]; then
+        local partitionPoint=$(partition $1 $2)
+        quickSort $1 $(expr $partitionPoint - 1)
+        quickSort $(expr $partitionPoint + 1) $2
+    fi
+}
+
+# involve the algorithm
+quickSort 0 $(expr $size - 1)
+
+echo "Steps: $steps"
+echo ${data[@]}
