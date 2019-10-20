@@ -10,6 +10,7 @@ class bubsort
         Scanner in=new Scanner(System.in);
         System.out.println("Enter how many numbers");
         n=in.nextInt();
+        System.out.println("Enter the numbers");
         for(i=0;i<n;i++)
         {
             A[i]=in.nextInt();
