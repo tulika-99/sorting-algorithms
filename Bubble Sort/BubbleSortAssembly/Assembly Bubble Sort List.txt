@@ -1,0 +1,14 @@
+## Using lists: 
+In assembly, there are only 32 registers, most of which are not accessible. Therefore, it is not at all feasible to store list data in registers. That means the list must be stored in memory. The way to do this is assembly is to declare your list like this:
+              Array: 7, 5, 4, 1, 6, 8, 3, 2, 9, 0
+                  Size: .word 10
+You can then get an element of the array by doing:
+              lw $t0, Array($s4)
+Where $s4 is 4 times the index that you want to access (because of the size of ints).
+Similarly, we can store words by doing: 
+              sw $t0, Array($s4)
+## Printing:
+In many languages like C, printing out is fairly trivial. Not so in assembly. There is no easy way to print out exactly the thing you want to print. Instead, there is a fairly weird way to set up a system to print out what you want. It includes putting the thing you want to print in $a0 and the size of the thing in $v0, submitting a syscall command, like so: 
+              lw $a0, Array($s2)  # print next value from the list
+              li $v0, 1
+              syscall
