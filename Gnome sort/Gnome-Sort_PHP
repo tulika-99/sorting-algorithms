@@ -1,0 +1,25 @@
+<?php
+function gnome_Sort($my_array){
+	$i = 1;
+	$j = 2;
+	while($i < count($my_array)){
+		if ($my_array[$i-1] <= $my_array[$i]){
+			$i = $j;
+			$j++;
+		}else{
+			list($my_array[$i],$my_array[$i-1]) = array($my_array[$i-1],$my_array[$i]);
+			$i--;
+			if($i == 0){
+				$i = $j;
+				$j++;
+			}
+		}
+	}
+	return $my_array;
+}
+$test_array = array(3, 0, 2, 5, -1, 4, 1);
+echo "Original Array :\n";
+echo implode(', ',$test_array );
+echo "\nSorted Array :\n";
+echo implode(', ',gnome_Sort($test_array)). PHP_EOL;
+?>
