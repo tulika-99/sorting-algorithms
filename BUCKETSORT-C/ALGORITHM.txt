@@ -1,0 +1,15 @@
+Algorithm
+bucketSort(array, size)
+
+
+Begin
+   for i := 0 to size-1 do
+      insert array[i] into the bucket index (size * array[i])
+   done
+   for i := 0 to size-1 do
+      sort bucket[i]
+   done
+   for i := 0 to size -1 do
+      gather items of bucket[i] and put in array
+   done
+End
