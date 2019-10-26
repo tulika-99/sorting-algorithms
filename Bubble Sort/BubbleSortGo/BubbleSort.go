@@ -19,7 +19,7 @@ func (arr MyArray) BubbleSort() {
 
 func main() {
 	arr := MyArray{64, 34, 25, 12, 22, 11, 90}
-	fmt.Printf("Before sort: %v\n", arr) //Before sort: [64 34 25 12 22 11 90]
+	fmt.Printf("Before sort: %v\n", arr) //Before sorting: [64 34 25 12 22 11 90]
 	arr.BubbleSort()
-	fmt.Printf("After sort: %v\n", arr) //After sort: [11 12 22 25 34 64 90]
+	fmt.Printf("After sort: %v\n", arr) //After sorting: [11 12 22 25 34 64 90]
 }
