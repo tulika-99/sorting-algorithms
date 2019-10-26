@@ -1,0 +1,15 @@
+1. Create a function bucket_sort that takes a list as argument.
+2. Inside the function set largest to the maximum element in the list and set length equal to the length of the list.
+3. Set size = largest/length.
+4. Create a list of empty lists and assign it to buckets.
+5. Create a loop with loop variable i that iterates from 0 to the length of the list – 1.
+6. In each iteration, determine to which bucket alist[i] belongs. This is done by taking the floor of alist[i]/size and using the answer as the index of the bucket. If the answer equals length, then alist[i] is placed in the last bucket, that is bucket[length -1 ].
+7. Perform insertion sort on each bucket.
+8. Concatenate the buckets to create the sorted list and return it.
+9. Create a function insertion_sort that takes a list as argument.
+10. Inside the function create a loop with a loop variable i that counts from 1 to the length of the list – 1.
+11. Set temp equal to the element at index i.
+12. Set j equal to i – 1.
+13. Create a while loop that runs as long as j is non-negative and temp is smaller than the element at index j.
+14. Inside the while loop, set the element at index j + 1 equal to the element at index j and decrement j.
+15. After the while loop finishes, set the element at index j + 1 equal to temp.
