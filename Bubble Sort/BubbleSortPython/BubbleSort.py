@@ -1,3 +1,4 @@
+# this sorts using bubblesort algorithm
 def bubbleSort(listofnumbers):
     for allnumbers in range(len(listofnumbers)-1,0,-1):
         for i in range(allnumbers):
