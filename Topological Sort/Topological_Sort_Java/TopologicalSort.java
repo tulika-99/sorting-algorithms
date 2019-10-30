@@ -2,8 +2,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Stack;
 
+//Time complexity : O(V + E)
+//V : number of vertices of the graph
+//E : number of edges of the graph
 public class TopologicalSort {
-	 static class Graph {
+    //Graph class implemented with adjacency list method
+    //resource : https://www.geeksforgeeks.org/graph-and-its-representations/ 
+	static class Graph {
         int N;
         ArrayList<ArrayList<Integer>> list;
         public Graph(int v) {
@@ -43,7 +48,16 @@ public class TopologicalSort {
         }
         return output;
     }
-	public static void main(String[] args) {
+    //driver method
+    public static void main(String[] args) {
+        //The directed acyclic graph that is created here:
+        //  5 ------> 0 <-------- 4
+        //  |                     |
+        //  |                     |
+        //  |                     |
+        // \|/                   \|/
+        //  *                     *
+        //  2 ------> 3 --------> 1
 		Graph g = new Graph(6); 
         g.addEdge(5, 2); 
         g.addEdge(5, 0); 
