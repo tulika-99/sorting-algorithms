@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+#define pi 3.14
+#define b 3.85
+#define d1 -2.3
+#define d2 0.01
+#define dx 0.385
+#define n 7
+
+int main() {
+	float f, d;
+	for (d = d1; d < d2; d += dx) {
+		f = pow(b + d, 3) * (1/tan(pi / (d + 0.15)));
+		printf("\n f = %7.1f   d = %3.1f", f, d);
+	}
+}
