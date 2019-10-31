@@ -1,0 +1,3 @@
+The algorithm works by starting a separate task for each item to be sorted, where each task sleeps for an interval corresponding to the item, then prints the item.
+
+Sleep Sort scales to the highest element in the list, rather than the size of the list, like others sorts algorithms.
