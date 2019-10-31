@@ -1,0 +1,5 @@
+Strand Sort is a algorithm that sorts in a increasing order.
+The algorithm first moves the first element of a list into a sub-list. 
+It then compares the last element in the sub-list to each subsequent element in the original list.
+Once there is an element in the original list that is greater than the last element in the sub-list, the element is removed from the original list and added to the sub-list.
+This process continues until the last element in the sub-list is compared to the remaining elements in the original list.
