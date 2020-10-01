@@ -35,7 +35,7 @@ git push origin master
 ```
 
 - Create a new pull request from your forked repository
-- And you are one step closer! :star:
+- And you are one step closer! :star_struck:
 
 Links to help out- 
 
