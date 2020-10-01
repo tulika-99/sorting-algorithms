@@ -1,0 +1,5 @@
+This program implements selection sort in Dart. 
+Selection sort is one of the most basic and naive ways to sort an array, but is also one of the slowest, running in O(n^2) time.
+
+The algorithm goes through the list repeatedly and finds the minimum value in the array through each pass.
+It then swaps this minimum value with the current index in the loop, effectively building up the list from the minimum value through each pass.
