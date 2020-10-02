@@ -1,0 +1,192 @@
+
+#code to implement smooth sort in VB.net
+
+Private Shared Function IsAscending(A As String, B As String) As Boolean
+	Return (StringType.StrCmp(A, B, False) <= 0)
+End Function
+
+Private Shared Sub UP(ByRef IA As Integer, ByRef IB As Integer, ByRef temp As Integer)
+	temp = IA
+	IA += IB + 1
+	IB = temp
+End Sub
+
+Private Shared Sub DOWN(ByRef IA As Integer, ByRef IB As Integer, ByRef temp As Integer)
+	temp = IB
+	IB = IA - IB - 1
+	IA = temp
+End Sub
+
+Private Shared q As Integer, r As Integer, p As Integer, b As Integer, c As Integer, r1 As Integer,
+	b1 As Integer, c1 As Integer
+Private Shared A As String()
+
+Private Shared Sub Sift()
+	Dim r0 As Integer, r2 As Integer, temp As Integer = 0
+	Dim t As String
+	r0 = r1
+	t = A(r0)
+
+	While b1 >= 3
+		r2 = r1 - b1 + c1
+
+		If Not IsAscending(A(r1 - 1), A(r2)) Then
+			r2 = r1 - 1
+			DOWN(b1, c1, temp)
+		End If
+
+		If IsAscending(A(r2), t) Then
+			b1 = 1
+		Else
+			A(r1) = A(r2)
+			r1 = r2
+			DOWN(b1, c1, temp)
+		End If
+	End While
+
+	If Convert.ToBoolean(r1 - r0) Then
+		A(r1) = t
+	End If
+End Sub
+
+Private Shared Sub Trinkle()
+	Dim p1 As Integer, r2 As Integer, r3 As Integer, r0 As Integer, temp As Integer = 0
+	Dim t As String
+	p1 = p
+	b1 = b
+	c1 = c
+	r0 = r1
+	t = A(r0)
+
+	While p1 > 0
+		While (p1 And 1) = 0
+			p1 >>= 1
+			UP(b1, c1, temp)
+		End While
+
+		r3 = r1 - b1
+
+		If (p1 = 1) OrElse IsAscending(A(r3), t) Then
+			p1 = 0
+		Else
+			p1 -= 1
+
+			If b1 = 1 Then
+				A(r1) = A(r3)
+				r1 = r3
+			Else
+				If b1 >= 3 Then
+					r2 = r1 - b1 + c1
+
+					If Not IsAscending(A(r1 - 1), A(r2)) Then
+						r2 = r1 - 1
+						DOWN(b1, c1, temp)
+						p1 <<= 1
+					End If
+					If IsAscending(A(r2), A(r3)) Then
+						A(r1) = A(r3)
+						r1 = r3
+					Else
+						A(r1) = A(r2)
+						r1 = r2
+						DOWN(b1, c1, temp)
+						p1 = 0
+					End If
+				End If
+			End If
+		End If
+	End While
+
+	If Convert.ToBoolean(r0 - r1) Then
+		A(r1) = t
+	End If
+
+	Sift()
+End Sub
+
+Private Shared Sub SemiTrinkle()
+	Dim T As String
+	r1 = r - c
+
+	If Not IsAscending(A(r1), A(r)) Then
+		T = A(r)
+		A(r) = A(r1)
+		A(r1) = T
+		Trinkle()
+	End If
+End Sub
+
+Public Shared Sub SmoothSort(Aarg As String(), N As Integer)
+	Dim temp As Integer = 0
+	A = Aarg
+	q = 1
+	r = 0
+	p = 1
+	b = 1
+	c = 1
+
+	While q < N
+		r1 = r
+		If (p And 7) = 3 Then
+			b1 = b
+			c1 = c
+			Sift()
+			p = (p + 1) >> 2
+			UP(b, c, temp)
+			UP(b, c, temp)
+		ElseIf (p And 3) = 1 Then
+			If q + c < N Then
+				b1 = b
+				c1 = c
+				Sift()
+			Else
+				Trinkle()
+			End If
+
+			DOWN(b, c, temp)
+			p <<= 1
+
+			While b > 1
+				DOWN(b, c, temp)
+				p <<= 1
+			End While
+
+			p += 1
+		End If
+
+		q += 1
+		r += 1
+	End While
+
+	r1 = r
+	Trinkle()
+
+	While q > 1
+		q -= 1
+
+		If b = 1 Then
+			r -= 1
+			p -= 1
+
+			While (p And 1) = 0
+				p >>= 1
+				UP(b, c, temp)
+			End While
+		Else
+			If b >= 3 Then
+				p -= 1
+				r = r - b + c
+				If p > 0 Then
+					SemiTrinkle()
+				End If
+
+				DOWN(b, c, temp)
+				p = (p << 1) + 1
+				r = r + c
+				SemiTrinkle()
+				DOWN(b, c, temp)
+				p = (p << 1) + 1
+			End If
+		End If
+	End While
+End Sub
