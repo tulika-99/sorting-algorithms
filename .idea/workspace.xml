@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a1ed95c-d230-4748-ace7-ea7c02d44627" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shell sort/ShellSortKotlin/ShellSort.kt" afterDir="false" />
-    </list>
+    <list default="true" id="6a1ed95c-d230-4748-ace7-ea7c02d44627" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kotlin-advanced-data-structures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,6 +39,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="523" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601631422780">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="523" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1601631422780" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1601573116420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
