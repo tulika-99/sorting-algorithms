@@ -1,0 +1,49 @@
+class BitonicSort {
+    private fun swap(array: IntArray, i: Int, j: Int, direction: Int) {
+        if (array[i] > array[j] && direction == 1 || array[i] < array[j] && direction == 0) {
+            val temp = array[i]
+            array[i] = array[j]
+            array[j] = temp
+        }
+    }
+
+    private fun merge(array: IntArray, low: Int, count: Int, direction: Int) {
+        if (count > 1) {
+            val k = count / 2
+            for (i in low until low + k) swap(array, i, i + k, direction)
+            merge(array, low, k, direction)  //Recursive call to merge first half
+            merge(array, low + k, k, direction) // Recursive call to merge second half
+        }
+    }
+
+    fun sort(array: IntArray, size: Int, up: Int) {
+        _sort(array, 0, size, up)
+    }
+
+    private fun _sort(array: IntArray, low: Int, count: Int, direction: Int) {
+        if (count > 1) {
+            val k = count / 2
+            _sort(array, low, k, 1)
+            _sort(array, low + k, k, 0)
+            merge(array, low, count, direction)
+        }
+    }
+
+    fun printArray(array: IntArray) {
+        println(array.joinToString(" "))
+    }
+}
+
+fun main() {
+    val a = intArrayOf(2, 8, 1, 4, 7, 3, 5, 1)
+    val size = a.size
+    val isPowerOfTwo = size > 0 && size and size - 1 == 0
+    if (isPowerOfTwo) {
+        val bitonicSort = BitonicSort()
+        bitonicSort.sort(array = a, size = size, up = 1)
+        println("The sorted array: ")
+        bitonicSort.printArray(a)
+    } else {
+        println("Array size is not power of 2")
+    }
+}
