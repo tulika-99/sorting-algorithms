@@ -27,6 +27,7 @@
   * Go
   * C 
   * C#
+  * Javascript
 * Bubble Sort
   * Bash 
   * Java 
