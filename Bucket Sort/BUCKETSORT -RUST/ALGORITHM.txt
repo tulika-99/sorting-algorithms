@@ -1,0 +1,1 @@
+Bucket sort is a non-comparative sort. The principle is to create some buckets, each of which corresponds to a data interval, and the data to be sorted is allocated to different buckets, and the buckets are internally sorted.
