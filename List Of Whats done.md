@@ -75,6 +75,7 @@
   * Python
   * C
   * PHP
+  * Dart
 * Cycle Sort
   * C++
 * Gnome sort
