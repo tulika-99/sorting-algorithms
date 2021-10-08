@@ -1,0 +1,6 @@
+ What is wiggle sort?
+         1.To sort an array in waveform.
+         2.The array’s elements shall be ordered such that,
+         arr[0]<arr[1]>arr[2]<arr[3] and so on in wiggle sort.(Even index have smaller value and odd
+         index having larger values)
+     
