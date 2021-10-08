@@ -52,6 +52,7 @@
   * C 
   * C# 
   * C++  
+  * Rust
 * CocktailSort
   * Java 
   * Javascript 
@@ -61,6 +62,8 @@
   * C# 
   * PHP
 * CombSort
+  * C++
+  * Python
   * Javascript 
 * Counting sort
   * Scala
@@ -209,6 +212,8 @@
 * StoogeSort
   * Python
 * Strand Sort
+  * Java
+* Tag Sort
   * Java
 * TimSort
   * Java
