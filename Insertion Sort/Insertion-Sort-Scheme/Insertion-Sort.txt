@@ -1,0 +1,5 @@
+Given an array of length n
+1. Go throught the array looking the highest value and add him to a new array and remove from this array
+2. Repeat it adding the new item to the start to this new array
+
+Time complexity O(n²) since for each i item you have to go through the array of lenght n-i
