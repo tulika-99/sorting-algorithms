@@ -1,0 +1,7 @@
+Given an array with length n and each value from [0, 1):
+1. Create n "buckets" (arrays) numbered from 0 to n-1
+2. Go through the array and insert each item into bucket number floor(n*item)
+3. Sort each bucket with insertion sort
+4. Return a new array with length n that concatenates each bucket, from 0 to n-1
+
+Time complexity depends on the spread of the values, if all of them end up into the same bucket, them the time complexity will be the same as Insertion Sort, or any sort you use the sort the buckets, in this case O(n²), but overall, if there is a good spread, them the time complexity will be O(n)
