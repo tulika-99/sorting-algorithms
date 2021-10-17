@@ -1,0 +1,2 @@
+StringSort application accepts any number of String values from a user up to 15, and displays them
+in ascending order.
