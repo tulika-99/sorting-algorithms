@@ -53,6 +53,7 @@
   * C# 
   * C++  
   * Rust
+  * JavaScript
 * CocktailSort
   * Java 
   * Javascript 
