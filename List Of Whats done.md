@@ -54,6 +54,8 @@
   * C++  
   * Rust
   * JavaScript
+* Cartesian Tree Sorting 
+  * C++
 * CocktailSort
   * Java 
   * Javascript 
