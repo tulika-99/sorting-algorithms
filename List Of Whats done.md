@@ -2,7 +2,7 @@
 
 * Bead Sort
   * Java
-* BiJtonic Sort
+* Bitonic Sort
   * Java  
   * C# 
   * C++ 
@@ -211,6 +211,8 @@
 * Smooth sort
   * VB.net
   * C++
+* Stalin Sort
+  * 
 * StoogeSort
   * Python
 * Strand Sort
@@ -232,3 +234,4 @@
   * Python
 * Wiggle Sort
   * Java
+  * C++
