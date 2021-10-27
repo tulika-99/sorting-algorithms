@@ -3,9 +3,9 @@
 #include<iostream>
 using namespace std;
 
-const int s=32;
+const int RUN=32;
 
-// This function sorts array from which is of size s
+// This function sorts array from which is of size RUN
 void insertionSort(int arr[], int l, int r){
     for (int i=l+1;i<=r;i++){
         int temp=arr[i];
@@ -56,11 +56,11 @@ void mergeArray(int arr[], int l, int m, int r){
 // Timsort function to sort the array[0...n-1]
 void timSort(int arr[], int n){
     // Sorting individual subarrays of size s
-    for (int i=0;i<n;i+=s)
-        insertionSort(arr, i, min((i+s-1),(n-1)));
+    for (int i=0;i<n;i+=RUN)
+        insertionSort(arr, i, min((i+RUN-1),(n-1)));
     
     // Merging the arrays from size RUN
-    for (int size=s;size<n;size=2*size){
+    for (int size=RUN;size<n;size=2*size){
         for (int l=0;l<n;l+=2*size){
             int mid=l+size-1;
             int r=min((l+2*size-1),(n-1));

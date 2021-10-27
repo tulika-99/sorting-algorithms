@@ -1,0 +1,11 @@
+TimSort is a sorting algorithm based on Insertion Sort and Merge Sort.
+The idea is based on the fact that insertion sort performs well for small arrays.
+
+Firstly, small pieces are sorted using Insertion Sort, then they are merged using the 
+Merge algorithm of Merge Sort.
+The array is divided into blocks known as RUN which are sorted using Insertion Sort
+one by one and then merged. 
+The size of RUN may vary between 32 and 64 depending upon the size of the array. 
+If the size of array is less than RUN, then array get sorted just by Insertion Sort. 
+The merge function performs well when sizes subarrays are powers of 2. 
+This algorithm works in O(n Log n) time.
