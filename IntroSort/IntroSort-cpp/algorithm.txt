@@ -1,0 +1,6 @@
+Introsort or Introspective sort is the generic sorting algorithm used in the C++ standard library.
+It is a hybrid sorting algorithm that uses Insertion sort, Quick sort and Heap sort to maximize efficiency.
+
+Even though quicksort is a pretty efficient algorithm for sorting an array, 
+it approaches O(N2) in the worst case, so we switch to either heap sort (when the size is too big) 
+or insertion sort (when the size is too small) to make it an around efficient algorithm.
