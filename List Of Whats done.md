@@ -79,6 +79,7 @@
   * C
   * PHP
   * Dart
+  * Typescript
 * Cycle Sort
   * C++
 * Gnome sort
@@ -116,6 +117,8 @@
   * Scala
   * Swift
   * Python
+* IntroSort
+  * C++
 * K\-Way Merge Sort 
   * C++
   * Java
