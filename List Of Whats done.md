@@ -3,6 +3,7 @@
 * Bead Sort
   * Java
   * C
+  * C++
 * Bitonic Sort
   * Java  
   * C# 
