@@ -2,6 +2,7 @@
 
 * Bead Sort
   * Java
+  * C
 * Bitonic Sort
   * Java  
   * C# 
