@@ -1,0 +1,8 @@
+The algorithm for odd even sort in c++ is as follows:-
+example: the array is {34, 2, 10, -9}
+First, we consider array to be unsorted,
+Then, we run a while loop which begins with considering array as sorted. It runs until array is not sorted. We intialize a 
+for loop for the elements at odd indices. If arr[i]>arr[i+1], we swap them.  With each swap we set isSorted value to false.
+A second for loop is initialized for elemnts at even indices.  If arr[i]>arr[i+1], we swap them. With each swap we set isSorted 
+value to false.
+This repeated swapping finally sorts the array,
